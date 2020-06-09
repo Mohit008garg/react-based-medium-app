@@ -1,0 +1,4 @@
+.navbar-nav li{
+    text-transform: uppercase !important;
+    width: max-content !important;
+}

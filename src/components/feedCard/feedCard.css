@@ -1,0 +1,6 @@
+.tag-list, tag-heart{
+    width: 10%;
+    align-self: flex-end;
+}
+.card:first-child {background: #fff}
+col:nth-child(2n+3) {background: #CCC}

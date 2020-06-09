@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import { Router } from 'react-router-dom';
+import Routes from './shared/Routes';
+import Navbar from './components/navBar/navBar';
+import History from './history';
 import './App.css';
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router history={History}>
+        <div className='App'>
+          {
+            (<>
+              <Navbar />
+              <Routes isAuthorised />
+            </>)
+          }
+        </div>
+      </Router>
     </div>
   );
 }
+
 
 export default App;
